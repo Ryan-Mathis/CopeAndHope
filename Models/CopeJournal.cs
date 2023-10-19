@@ -13,5 +13,6 @@ public class CopeJournal
     public UserProfile UserProfile { get; set; }
     public int CopeStrategyId { get; set; }
     public CopeStrategy CopeStrategy { get; set; }
+    public List<CopeEmotion> CopeEmotions { get; set; }
 }
 

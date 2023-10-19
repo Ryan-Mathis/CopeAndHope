@@ -347,7 +347,6 @@ namespace CopeAndHope.Migrations
                         .HasColumnType("character varying(50)");
 
                     b.Property<string>("IdentityUserId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
@@ -435,7 +434,7 @@ namespace CopeAndHope.Migrations
                         new
                         {
                             Id = "c3aaeb97-d2ba-4a53-a521-4eea61e59b35",
-                            ConcurrencyStamp = "624785a9-a19a-4bf5-b370-fbf126d4335e",
+                            ConcurrencyStamp = "d01b49db-2e7e-46af-a901-8251ae673d45",
                             Name = "Admin",
                             NormalizedName = "admin"
                         });
@@ -534,13 +533,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f54ec6a8-ee6c-4c2b-b984-6e109791c009",
+                            ConcurrencyStamp = "47960b3d-ca08-4fbe-9876-15119b0b4880",
                             Email = "admina@strator.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEBW774jiC8H9LesszKOoF10330wdVdfllXIbbM/SqO7mIcNmjhCtwJUuGRH2/DZHIg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENDq0T5FbYROiTavVwdXG1f2XP/drbg0ddPGD7s6pnAVXQo34hqFWxOOBz5OexDXnw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "79215fd3-c300-41a4-a196-ad9d15b47257",
+                            SecurityStamp = "48657560-3523-41fb-89fd-3562043c1a2c",
                             TwoFactorEnabled = false,
                             UserName = "Administrator"
                         },
@@ -548,13 +547,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "d8d76512-74f1-43bb-b1fd-87d3a8aa36df",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bbcfb2c4-3163-4df8-8d98-f9bbd7bcfbcb",
+                            ConcurrencyStamp = "74633978-1336-4ad2-a410-ed37fc4352ca",
                             Email = "ryan@mathis.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEOVjWJ6+FNBbw1UMojlwhyzirEpBx1tuci/2uWrQsCiqI5MdJBCLS/0CX7XZQUfRig==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMtTnshMzZka3Y5GdpQP+dwuXdH84rFGW+nqxq+bIrx9T7KUGEHxOB9Llnxwpl7e9Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "552464ea-3465-4812-a15c-b15793469b62",
+                            SecurityStamp = "3a8486a4-becd-403d-858b-0083a19ca004",
                             TwoFactorEnabled = false,
                             UserName = "RyanMathis"
                         },
@@ -562,13 +561,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "a7d21fac-3b21-454a-a747-075f072d0cf3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ff3855ba-bdcc-4f9d-abc4-636e158dd194",
+                            ConcurrencyStamp = "cacfd477-1a19-4455-9e29-b44fe51b046c",
                             Email = "ethan@mathis.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAED+qnoXxFVh/QrrPSqMO5rsNGrOKEglK2LazXqCrKV2s+Jif4nnD3bLiPvKX9klGEw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOnd3iG4mqoFSH8bilYcmeb2LdOXVRdPvgJX6H+kA27DS3iuSZvSdOmiTTdujPLolA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "84fc1e76-b8c9-4b03-80ef-3d7204d20079",
+                            SecurityStamp = "62c28541-d9d0-43ad-b063-69acbc71d9e8",
                             TwoFactorEnabled = false,
                             UserName = "EthanMathis"
                         },
@@ -576,13 +575,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "c806cfae-bda9-47c5-8473-dd52fd056a9b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f46669d5-e396-41e1-83a7-40b9117af73c",
+                            ConcurrencyStamp = "cc7a34ea-6fc4-430a-8ff7-091c583882dc",
                             Email = "simone@henderson.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEHPDxFlUNdVmf6EW+TuF1XRKO3vkc9tTujqbWHqxB9P9mc64ohVZjK30fMKz8i62Ag==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMwpBTnyPQ2FH5qS8vwebYydXPFGOrHsrD6vGABLZP4ChJDBOlUu1WTnAMDOSG2AIg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b9417a2c-0e2d-4007-9b9f-3f7f23faf526",
+                            SecurityStamp = "1e4335d3-e435-43c5-8aab-43810914335b",
                             TwoFactorEnabled = false,
                             UserName = "SimoneHenderson"
                         },
@@ -590,13 +589,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "9ce89d88-75da-4a80-9b0d-3fe58582b8e2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fa2bddf0-b4dd-455f-b857-8348e4aa4e47",
+                            ConcurrencyStamp = "361c7d60-74e0-45ee-b498-303e8475ed6c",
                             Email = "bob@williams.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAED2TqIRFv3LohwJ6wqSZ5Y4bU0cuc8sFgOmIXGh7cx86UIB0zpleSqqcRyrJTQTYsQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELz4baWQn7VLj4I184wqk46/SqkHjhg9Ov13R2ZnF+Z+/ZpHeR7dN94vONM5GrCbbw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "26981ff0-cb06-444a-ad9c-09143674f972",
+                            SecurityStamp = "2745112d-cca2-46ba-859a-64cfd776c08d",
                             TwoFactorEnabled = false,
                             UserName = "BobWilliams"
                         },
@@ -604,13 +603,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "d224a03d-bf0c-4a05-b728-e3521e45d74d",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "82198de3-da80-4ff1-a255-8b5caa99b50a",
+                            ConcurrencyStamp = "707aa808-6894-4eff-aed4-6e5bed957ff9",
                             Email = "Eve@Davis.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAECKbGVO00A8O3V/gqee5ND9qHzXVYDUt8e6OrfhnT5WELIApioM7VTGACm/QO4NFIQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFTOkRAvH5xHIpXiIcz/t3TxPNRTSsPIKpfIJnb6wlDbuwz3pfPcAKrstXXaz+WWig==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0c20b933-f7bc-43c3-8f06-49f0248082ed",
+                            SecurityStamp = "49818934-a75a-406d-98f4-8d7fa952b865",
                             TwoFactorEnabled = false,
                             UserName = "EveDavis"
                         });
@@ -712,7 +711,7 @@ namespace CopeAndHope.Migrations
             modelBuilder.Entity("CopeAndHope.Models.CopeEmotion", b =>
                 {
                     b.HasOne("CopeAndHope.Models.CopeJournal", "CopeJournal")
-                        .WithMany()
+                        .WithMany("CopeEmotions")
                         .HasForeignKey("CopeJournalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -751,9 +750,7 @@ namespace CopeAndHope.Migrations
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
-                        .HasForeignKey("IdentityUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdentityUserId");
 
                     b.Navigation("IdentityUser");
                 });
@@ -807,6 +804,11 @@ namespace CopeAndHope.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CopeAndHope.Models.CopeJournal", b =>
+                {
+                    b.Navigation("CopeEmotions");
                 });
 
             modelBuilder.Entity("CopeAndHope.Models.CopeStrategy", b =>

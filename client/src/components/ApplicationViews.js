@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import { AuthorizedRoute } from "./auth/AuthorizedRoute";
+import MyJournals from "./journals/MyJournals.js";
 
 export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
   return (
@@ -14,6 +15,10 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
               <p>Home Page</p>
             </AuthorizedRoute>
           }
+        />
+        <Route
+          path="/myjournals"
+          element={<MyJournals loggedInUser={loggedInUser} />}
         />
         <Route
           path="login"

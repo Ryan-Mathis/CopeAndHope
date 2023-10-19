@@ -353,7 +353,7 @@ public class CopeAndHopeDbContext : IdentityDbContext<IdentityUser>
                 JournalText = "This strategy was a tough one for me to implement...",
                 JournalDate = new DateTime(2023, 10, 15),
                 UserProfileId = 1,
-                CopeStrategyId = 3
+                CopeStrategyId = 3,
             },
             new CopeJournal
             {

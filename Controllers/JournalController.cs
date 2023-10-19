@@ -19,6 +19,8 @@ public class JournalController : ControllerBase
         return Ok(_dbContext.CopeJournals
         .Include(j => j.CopeStrategy)
         .Include(j => j.UserProfile)
+        .Include(j => j.CopeEmotions)
+        .ThenInclude(ce => ce.Emotion)
         .Where(j => j.UserProfileId == userId)
         .OrderBy(j => j.LastUpdated)
         .ToList());

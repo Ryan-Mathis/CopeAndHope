@@ -16,7 +16,7 @@ import { logout } from "../managers/authManager";
 export default function NavBar({ loggedInUser, setLoggedInUser }) {
   const [open, setOpen] = useState(false);
 
-  // const toggleNavbar = () => setOpen(!open);
+  const toggleNavbar = () => setOpen(!open);
 
   // const getInventory = () => {
   //   //implement functionality here....
@@ -41,15 +41,15 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
         </NavbarBrand>
         {loggedInUser ? (
           <>
-            {/* <NavbarToggler onClick={toggleNavbar} />
+            <NavbarToggler onClick={toggleNavbar} />
             <Collapse isOpen={open} navbar>
               <Nav navbar>
                 <NavItem onClick={() => setOpen(false)}>
-                  <NavLink tag={RRNavLink} to="/bikes">
-                    Bikes
+                  <NavLink tag={RRNavLink} to="/myjournals">
+                    My Journals
                   </NavLink>
                 </NavItem>
-                <NavItem onClick={() => setOpen(false)}>
+                {/* <NavItem onClick={() => setOpen(false)}>
                   <NavLink tag={RRNavLink} to="/workorders">
                     Work Orders
                   </NavLink>
@@ -60,12 +60,9 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
                       Employees
                     </NavLink>
                   </NavItem>
-                )}
+                )} */}
               </Nav>
             </Collapse>
-            <NavbarText style={{ marginRight: "4px" }}>
-              Bikes in Garage:
-            </NavbarText> */}
             <Button
               color="primary"
               onClick={(e) => {
