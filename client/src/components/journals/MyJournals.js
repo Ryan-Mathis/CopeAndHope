@@ -49,7 +49,7 @@ export default function MyJournals ({ loggedInUser }) {
             <tbody>
               {journals.map((j, index) => (
                 <tr key={index}>
-                  <td>{j.copeStrategy.copeStrategyText}</td>
+                  <td>{j.copeStrategy.copeStrategyName}</td>
                   <td>{j.journalText}</td>
                   {j.copeEmotions.map((ce) => (
                     <td>{ce.emotion.emotionName}</td>

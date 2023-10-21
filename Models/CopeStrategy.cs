@@ -6,6 +6,8 @@ public class CopeStrategy
 {
     public int Id { get; set; }
     [Required]
-    public string CopeStrategyText { get; set; }
+    public string CopeStrategyName { get; set; }
+    [Required]
+    public string CopeStrategyContent { get; set; }
     public List<CopeJournal> CopeJournals { get; set; }
 }
