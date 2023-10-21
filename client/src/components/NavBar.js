@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink as RRNavLink } from "react-router-dom";
+import { NavLink as RRNavLink, useNavigate } from "react-router-dom";
 import {
   Button,
   Collapse,
@@ -17,6 +17,7 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
   const [open, setOpen] = useState(false);
 
   const toggleNavbar = () => setOpen(!open);
+  const navigate = useNavigate();
 
   // const getInventory = () => {
   //   //implement functionality here....
@@ -71,6 +72,7 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
                 logout().then(() => {
                   setLoggedInUser(null);
                   setOpen(false);
+                  navigate("/login")
                 });
               }}
             >

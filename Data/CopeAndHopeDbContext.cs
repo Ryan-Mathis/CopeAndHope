@@ -141,157 +141,147 @@ public class CopeAndHopeDbContext : IdentityDbContext<IdentityUser>
             new CopeStrategy
             {
                 Id = 1,
-                CopeStrategyText = "Example Coping Strategy 1"
+                CopeStrategyName = "Deep Breathing",
+                CopeStrategyContent = "Sit comfortably and place one hand on your abdomen. Breathe in through your nose, deeply enough that the hand on your abdomen rises. Hold the air in your lungs, and then exhale slowly through your mouth, with your lips puckered as if you are blowing out through a straw. Time the inhalation (4s), pause (4s), and exhalation (6s). Practice for 3 to 5 minutes."
             },
             new CopeStrategy
             {
                 Id = 2,
-                CopeStrategyText = "Example Coping Strategy 2"
+                CopeStrategyName = "Progressive Muscle Relaxation",
+                CopeStrategyContent = "By tensing and relaxing the muscles throughout your body, you can acheive a powerful feeling of relaxation. Additionally, progressive muscle relaxation will help you spot anxiety by teaching you to recognize feelings of muscle tension. Sit back in a comfortable position. You will tense your muscles tightly, but not to the point of strain. Hold the tension for 10 seconds and pay close attention to how it feels. Then, release the tension, and notice how the feeling of relaxation differs from the feeling of tension. Day 1 (feet, calves, thighs), Day 2 (back, shoulders, arms), Day 3 (hands, face, full body)"
             },
             new CopeStrategy
             {
                 Id = 3,
-                CopeStrategyText = "Example Coping Strategy 3"
+                CopeStrategyName = "Imagery",
+                CopeStrategyContent = "Your thoughts have the power to change how you feel. If you think of something sad, it's likely you'll start to feel sad. The opposite is also true: When you think of something positive and calming, you feel relaxed. The imagery technique harnesses this power to reduce anxiety. Think of a place that you find comforting. For 5 to 10 minutes, use all your senses to imagine this setting in great detail. Don't just think fleetingly about this place--really imagine it (hit all 5 sense in your description - what do you see at the place, what do your hear, what do you smell, what could you feel there, what would you be eating or drinking there)."
             },
             new CopeStrategy
             {
                 Id = 4,
-                CopeStrategyText = "Example Coping Strategy 4"
+                CopeStrategyName = "Meditation",
+                //try to implement some sort of embeded YouTube video here maybe?
+                CopeStrategyContent = "Here are some examples of guided meditation."
             },
             new CopeStrategy
             {
                 Id = 5,
-                CopeStrategyText = "Example Coping Strategy 5"
+                CopeStrategyName = "Gratitude",
+                CopeStrategyContent = "Write 10 things every day that you are grateful for, consider sharing those with a loved one."
             },
             new CopeStrategy
             {
                 Id = 6,
-                CopeStrategyText = "Example Coping Strategy 6"
+                CopeStrategyName = "Energy Redirection",
+                CopeStrategyContent = "Do 10 pushups or 10 jumping jacks. This can help to expend any anxiety by redirecting your nervous system to positively channel that energy."
             },
             new CopeStrategy
             {
                 Id = 7,
-                CopeStrategyText = "Example Coping Strategy 7"
+                CopeStrategyName = "3-3-3",
+                CopeStrategyContent = "Name 3 things you can see, 3 sounds you can hear, and then name 3 things with different texture around you."
             },
             new CopeStrategy
             {
                 Id = 8,
-                CopeStrategyText = "Example Coping Strategy 8"
+                CopeStrategyName = "Changing Endorphins",
+                CopeStrategyContent = "Tell a joke(they can be a little inappropriate if you like :D)"
             },
             new CopeStrategy
             {
                 Id = 9,
-                CopeStrategyText = "Example Coping Strategy 9"
+                CopeStrategyName = "Increasing Endorphins",
+                CopeStrategyContent = "Name 2 things you are proud of yourself for."
             },
             new CopeStrategy
             {
                 Id = 10,
-                CopeStrategyText = "Example Coping Strategy 10"
+                CopeStrategyName = "Nervous System Regulation: Butterfly hug",
+                CopeStrategyContent = "Clasp your hands together and gently tap on your chest one side at a time for 2 minutes. Focus on your breathing."
             },
             new CopeStrategy
             {
                 Id = 11,
-                CopeStrategyText = "Example Coping Strategy 11"
+                CopeStrategyName = "Nervous System Regulation: Pysiological Sigh",
+                CopeStrategyContent = "Take a big, deep, long breath in - do another short breath at the top - then breath out. Repeat for 10 cycles."
             },
             new CopeStrategy
             {
                 Id = 12,
-                CopeStrategyText = "Example Coping Strategy 12"
+                CopeStrategyName = "Neuro Tapping",
+                CopeStrategyContent = "This uses energy points to turn off the brain's alarm system. We will tap 10 times at each point. First point is the side of your hand(one hand horizontal, the other vertical - the horizontal hand will be tapping on the vertical one), second point is the eyebrow in the middle of the head using one hands, third point is the sides of the eyebrows using one hand on each side, fourth point is under the eyes at the cheek bone, fifth point is one hand under the nose with one hand, sixth point is on the chin with one hand."
             },
             new CopeStrategy
             {
                 Id = 13,
-                CopeStrategyText = "Example Coping Strategy 13"
+                CopeStrategyName = "Mantras",
+                CopeStrategyContent = "Saying a phrase that helps calm us. 'I am okay.' 'I am safe.' 'This will pass.' 'I have come a long way.' 'I will succeed.'"
             },
             new CopeStrategy
             {
                 Id = 14,
-                CopeStrategyText = "Example Coping Strategy 14"
+                CopeStrategyName = "Seated Stretches",
+                CopeStrategyContent = "Go to YouTube and find a guide to seated stretches. Find a place with a secure seat and practice some of these stretches for 5 to 10 minutes a day."
             },
             new CopeStrategy
             {
                 Id = 15,
-                CopeStrategyText = "Example Coping Strategy 15"
+                CopeStrategyName = "5-4-3-2-1",
+                CopeStrategyContent = "Find five things you can see, four things you can touch, three things you can hear, two things you can smell, and one thing you can taste."
             },
             new CopeStrategy
             {
                 Id = 16,
-                CopeStrategyText = "Example Coping Strategy 16"
+                CopeStrategyName = "Creating Endorpins - Categories",
+                CopeStrategyContent = "Think of a category that you can name at least 10 items in, these might include songs, sports, dog breeds, cities, etc."
             },
             new CopeStrategy
             {
                 Id = 17,
-                CopeStrategyText = "Example Coping Strategy 17"
+                CopeStrategyName = "Back to Basics",
+                CopeStrategyContent = "Describe an everyday activity in great detail, for example: Cooking breakfast - first I pick out ingredients from the fridge, then I pull out my pan, then I turn on the stove, etc.  Pick an activity you feel like you can describe in great detail."
             },
             new CopeStrategy
             {
                 Id = 18,
-                CopeStrategyText = "Example Coping Strategy 18"
+                CopeStrategyName = "Wash",
+                CopeStrategyContent = "Running water over your hands can help to regulate your nervous system, try either washing your hands or just running water over them for at least 30 seconds, 5 - 10 times a day."
             },
             new CopeStrategy
             {
                 Id = 19,
-                CopeStrategyText = "Example Coping Strategy 19"
+                CopeStrategyName = "Grounding Objects",
+                CopeStrategyContent = "Identify a grounding object, this could be a piece of jewelry you often wear or something as simple as a nicely textured rock or piece of fabric. Whenever you are starting to feel overwhelmed by negative emotions, trauma triggers, or anxiety, touch your grounding object to help you stay rooted in the present"
             },
             new CopeStrategy
             {
                 Id = 20,
-                CopeStrategyText = "Example Coping Strategy 20"
+                CopeStrategyName = "Coloring Therapy",
+                CopeStrategyContent = "Color in a coloring book for 10 minutes. Let your mind focus on the colors and your creativity to help relax your mind."
             },
             new CopeStrategy
             {
                 Id = 21,
-                CopeStrategyText = "Example Coping Strategy 21"
+                CopeStrategyName = "Laughter Therapy",
+                CopeStrategyContent = "Watch a funny stand-up comedy show or humorous videos online to make yourself laugh and revel in the laughter."
             },
             new CopeStrategy
             {
                 Id = 22,
-                CopeStrategyText = "Example Coping Strategy 22"
+                CopeStrategyName = "Nature Walk",
+                CopeStrategyContent = "Take a leisurely walk in a nearby park or forest. Connect with nature and breath the fresh air around you."
             },
             new CopeStrategy
             {
                 Id = 23,
-                CopeStrategyText = "Example Coping Strategy 23"
+                CopeStrategyName = "Remember a Safe Place",
+                CopeStrategyContent = "Describe a place that you find very soothing(example: the beach - the sounds, colors, shapes, textures)"
             },
             new CopeStrategy
             {
                 Id = 24,
-                CopeStrategyText = "Example Coping Strategy 24"
-            },
-            new CopeStrategy
-            {
-                Id = 25,
-                CopeStrategyText = "Example Coping Strategy 25"
-            },
-            new CopeStrategy
-            {
-                Id = 26,
-                CopeStrategyText = "Example Coping Strategy 26"
-            },
-            new CopeStrategy
-            {
-                Id = 27,
-                CopeStrategyText = "Example Coping Strategy 27"
-            },
-            new CopeStrategy
-            {
-                Id = 28,
-                CopeStrategyText = "Example Coping Strategy 28"
-            },
-            new CopeStrategy
-            {
-                Id = 29,
-                CopeStrategyText = "Example Coping Strategy 29"
-            },
-            new CopeStrategy
-            {
-                Id = 30,
-                CopeStrategyText = "Example Coping Strategy 30"
-            },
-            new CopeStrategy
-            {
-                Id = 31,
-                CopeStrategyText = "Example Coping Strategy 31"
+                CopeStrategyName = "Aromatherapy",
+                CopeStrategyContent = "Using essential oils like lavender or eucalyptus in a diffuser to create a calming and soothing atmosphere in your space."
             }
         });
 
