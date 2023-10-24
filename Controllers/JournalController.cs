@@ -1,4 +1,5 @@
 using CopeAndHope.Data;
+using CopeAndHope.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,7 @@ public class JournalController : ControllerBase
     {
         _dbContext = context;
     }
+
     [HttpGet("{userId}")]
     public IActionResult GetCurrentUserJournals(int userId)
     {
@@ -24,5 +26,26 @@ public class JournalController : ControllerBase
         .Where(j => j.UserProfileId == userId)
         .OrderBy(j => j.LastUpdated)
         .ToList());
+    }
+
+    [HttpPost]
+    public IActionResult CreateNewJournal(CopeJournal copeJournal)
+    {
+        copeJournal.JournalDate = DateTime.Now;
+        
+        List<CopeEmotion> copeEmotions = new List<CopeEmotion>();
+
+        foreach (CopeEmotion ce in copeJournal.CopeEmotions)
+        {
+            ce.Emotion = _dbContext.Emotions.Single(e => e.Id == ce.EmotionId);
+            copeEmotions.Add(ce);
+        }
+
+        copeJournal.CopeEmotions = copeEmotions;
+
+        _dbContext.CopeJournals.Add(copeJournal);
+        _dbContext.SaveChanges();
+
+        return Created($"/api/journal/myjournals/{copeJournal.Id}", copeJournal);
     }
 }

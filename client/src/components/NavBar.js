@@ -33,8 +33,8 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
       <Navbar color="light" light fixed="true" expand="lg">
         <NavbarBrand className="mr-auto" tag={RRNavLink} to="/">
           <img
-            src="./logo192.png"
-            alt="logo"
+            src="./CHlogo.jpg"
+            alt="C&Hlogo"
             height={50}
             style={{ marginRight: "8px" }}
           />
