@@ -54,10 +54,10 @@ export default function MyJournals ({ loggedInUser }) {
                   {j.copeEmotions.map((ce) => (
                     <td>{ce.emotion.emotionName}</td>
                   ))}
-                  {/* <td>
-                    <Button color="primary" onClick={() => navigate(`/journals/${j.id}`)}>View Journal</Button>
-                  </td>
                   <td>
+                    <Button color="primary" onClick={() => navigate(`/myjournals/${j.id}`)}>View Journal</Button>
+                  </td>
+                  {/* <td>
                     <Button color="warning" onClick={() => navigate(`/my-journals/${j.id}/edit`)}>Edit Journal</Button>
                   </td>
                   <td>

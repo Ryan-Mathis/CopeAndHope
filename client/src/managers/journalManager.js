@@ -1,7 +1,10 @@
 const _apiUrl = `/api/journal`;
 
 export const fetchJournalsByUserId = (userId) => {
-    return fetch(`${_apiUrl}/${userId}`).then((res) => res.json());
+    return fetch(`${_apiUrl}/user/${userId}`).then((res) => res.json());
+};
+export const fetchJournalById = (journalId) => {
+    return fetch(`${_apiUrl}/${journalId}`).then((res) => res.json());
 };
 
 export const fetchCreateNewJournal = (journal) => {
