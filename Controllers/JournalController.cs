@@ -15,17 +15,27 @@ public class JournalController : ControllerBase
         _dbContext = context;
     }
 
-    [HttpGet("{userId}")]
+    [HttpGet("user/{userId}")]
     public IActionResult GetCurrentUserJournals(int userId)
+    {
+        return Ok(_dbContext.CopeJournals
+        .Include(j => j.CopeStrategy)
+        .Include(j => j.CopeEmotions)
+        .ThenInclude(ce => ce.Emotion)
+        .Where(j => j.UserProfileId == userId)
+        .OrderBy(j => j.LastUpdated)
+        .ToList());
+    }
+
+    [HttpGet("{journalId}")]
+    public IActionResult GetJournalById(int journalId)
     {
         return Ok(_dbContext.CopeJournals
         .Include(j => j.CopeStrategy)
         .Include(j => j.UserProfile)
         .Include(j => j.CopeEmotions)
         .ThenInclude(ce => ce.Emotion)
-        .Where(j => j.UserProfileId == userId)
-        .OrderBy(j => j.LastUpdated)
-        .ToList());
+        .SingleOrDefault(j => j.Id == journalId));
     }
 
     [HttpPost]

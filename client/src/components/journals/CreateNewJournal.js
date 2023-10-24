@@ -74,7 +74,7 @@ export const CreateNewJournal = ({ loggedInUser }) => {
                 copeStrategyId: activeCopeStrategy.id
             };
             fetchCreateNewJournal(newJournalToSubmit).then((res) =>
-                navigate(`/myjournals`)
+                navigate(`/myjournals/${res.id}`)
             );
         }
     };
