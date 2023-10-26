@@ -14,3 +14,11 @@ export const fetchCreateNewJournal = (journal) => {
         body: JSON.stringify(journal)
     }).then(res => res.json())
 };
+
+export const fetchEditJournal = (id, journal) => {
+    return fetch(`${_apiUrl}/myjournals/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(journal)
+    })
+};

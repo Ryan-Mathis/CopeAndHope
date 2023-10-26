@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchJournalsByUserId } from '../../managers/journalManager.js';
-import { Button, Modal, ModalFooter, ModalHeader, Table } from 'reactstrap';
+import { Button, Modal, ModalFooter, ModalHeader, Spinner, Table } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 
 export default function MyJournals ({ loggedInUser }) {
@@ -30,7 +30,7 @@ export default function MyJournals ({ loggedInUser }) {
     }, []);
   
     if (!journals){
-      return null;
+      return <Spinner />;
     }
   
     return (

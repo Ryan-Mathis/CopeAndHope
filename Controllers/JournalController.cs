@@ -42,7 +42,7 @@ public class JournalController : ControllerBase
     public IActionResult CreateNewJournal(CopeJournal copeJournal)
     {
         copeJournal.JournalDate = DateTime.Now;
-        
+
         List<CopeEmotion> copeEmotions = new List<CopeEmotion>();
 
         foreach (CopeEmotion ce in copeJournal.CopeEmotions)
@@ -57,5 +57,44 @@ public class JournalController : ControllerBase
         _dbContext.SaveChanges();
 
         return Created($"/api/journal/myjournals/{copeJournal.Id}", copeJournal);
+    }
+
+    [HttpPut("myjournals/{id}")]
+    public IActionResult EditJournal(int id, CopeJournal copeJournal)
+    {
+
+        CopeJournal journalToEdit = _dbContext.CopeJournals.SingleOrDefault(cj => cj.Id == id);
+
+        if (journalToEdit == null)
+        {
+            return NotFound();
+        }
+
+        journalToEdit.JournalText = copeJournal.JournalText;
+        journalToEdit.LastUpdated = DateTime.Now;
+
+        List<CopeEmotion> existingCopeEmotions = _dbContext.CopeEmotions
+        .Where(ce => ce.CopeJournalId == journalToEdit.Id)
+        .ToList();
+
+        foreach (CopeEmotion existingCopeEmotion in existingCopeEmotions)
+        {
+            if (!copeJournal.CopeEmotions.Any(ce => ce.Id == existingCopeEmotion.Id))
+            {
+                _dbContext.CopeEmotions.Remove(existingCopeEmotion);
+            }
+        }
+
+        journalToEdit.CopeEmotions ??= new List<CopeEmotion>();
+
+        foreach (CopeEmotion ce in copeJournal.CopeEmotions)
+        {
+            ce.Emotion = _dbContext.Emotions.Single(e => e.Id == ce.EmotionId);
+            journalToEdit.CopeEmotions.Add(ce);
+        }
+
+        _dbContext.SaveChanges();
+
+        return NoContent();
     }
 }

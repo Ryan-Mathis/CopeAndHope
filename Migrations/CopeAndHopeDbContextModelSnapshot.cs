@@ -427,7 +427,7 @@ namespace CopeAndHope.Migrations
                         new
                         {
                             Id = "c3aaeb97-d2ba-4a53-a521-4eea61e59b35",
-                            ConcurrencyStamp = "70b09414-fb74-4ba0-9c43-d7890fd95289",
+                            ConcurrencyStamp = "83bfcfe3-a725-48a2-9a9f-78954f132cdf",
                             Name = "Admin",
                             NormalizedName = "admin"
                         });
@@ -526,13 +526,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d5044a8d-7dc2-49c3-9b6c-e40a37a3ad1f",
+                            ConcurrencyStamp = "869757ba-9ca5-464a-93d3-dde27700e5d1",
                             Email = "admina@strator.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEEKOtqqaONl46lGoGi48L57g/mWnIqFZV+RRMpcRnbISeI22xQ49pvaLvOjEh900EA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFd3uVMSnGutj0lwqt2ixJ+gx04sctGijf/GYvasR42SPSGxQly6VO59sqoBbKO16A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c17771c4-aa3b-4b41-889b-dbca225ab377",
+                            SecurityStamp = "dce29844-40b5-4e27-aa57-066b2dfb9f7d",
                             TwoFactorEnabled = false,
                             UserName = "Administrator"
                         },
@@ -540,13 +540,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "d8d76512-74f1-43bb-b1fd-87d3a8aa36df",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c02c30e4-3a6d-42b2-9669-15e12f0b9f65",
+                            ConcurrencyStamp = "e1f246b6-0582-47a7-919f-f00ee9865982",
                             Email = "ryan@mathis.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEDqmeG4WmME9+rluZFXc4P7UaCCnjdi7ISnZV4DLWlkHngEnrKCd3laFo89QyWghHg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBGYE0ydncy3FpnDzw422W96TPeHtitA+RgB7j2ragaopgK9TFJoSLrA/3uuxbVq3Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4220b793-2f22-4cae-881a-87eb4094c279",
+                            SecurityStamp = "04fda7a8-76a2-46b7-8912-079d0795e8b9",
                             TwoFactorEnabled = false,
                             UserName = "RyanMathis"
                         },
@@ -554,13 +554,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "a7d21fac-3b21-454a-a747-075f072d0cf3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e71c2c45-c13e-4fee-ab01-2413c9597c28",
+                            ConcurrencyStamp = "c6ef177d-87b9-4d01-91f8-421ee603fc6b",
                             Email = "ethan@mathis.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEO6xVrNJ9hkEURIbMHvVK5T8hbRLVELlxYdoA753dsobBs3xAoff5Xz+oYZLIe1fVw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGGR3/5nOVEes4cJtrf+99GOT7JNYlQ3DmDcemZzPe0DgQN2rMQML7n2G0JSi+8XYA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cbc6bec4-c52c-446d-bacc-af174b2be9ec",
+                            SecurityStamp = "3ba0b1aa-f067-4f8a-a75a-e3ffd9ab4210",
                             TwoFactorEnabled = false,
                             UserName = "EthanMathis"
                         },
@@ -568,13 +568,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "c806cfae-bda9-47c5-8473-dd52fd056a9b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "413682ff-8220-4a86-bf84-d63f76e44274",
+                            ConcurrencyStamp = "369f45e0-bf0b-46cf-ad23-912b9e868d5b",
                             Email = "simone@henderson.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEM193gkur22PMh68r1IlKYeFTITotiLQNXfaeKszT9PqyPnpp8sYEm6YZHtGUMHJFA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHW4g7eBoFZP5azAablLlQ/1eWXykoUgnbNJ31nt/p3VtPQeD7uGGo7pzd8/hQTYaw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "385e2999-40a2-45a1-aa37-d70cb557bcb4",
+                            SecurityStamp = "13f22a92-a139-4965-85be-13cbaae5b546",
                             TwoFactorEnabled = false,
                             UserName = "SimoneHenderson"
                         },
@@ -582,13 +582,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "9ce89d88-75da-4a80-9b0d-3fe58582b8e2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7ab80fcc-22ec-49db-99ee-2cbd01ee39ea",
+                            ConcurrencyStamp = "94b63018-12e3-49da-bdd4-20ed83c5d8ec",
                             Email = "bob@williams.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEGAlB1um8TtR4CmG+uzD6vZJ3UG1aRjGKtmlshyp0L+ilvr8kRM24WCDOeLh6Y4QNg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPy0KtxNTBqYoXRYjw0IYE3APWZyanEAVZK+Crh6XBhhhlO8/HViZwuJn9Wo6d5f5A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2e04dec8-d4f7-4ac0-86d3-56ae7d4dec19",
+                            SecurityStamp = "170dce91-84ed-4549-bab0-7d4aa895b61f",
                             TwoFactorEnabled = false,
                             UserName = "BobWilliams"
                         },
@@ -596,13 +596,13 @@ namespace CopeAndHope.Migrations
                         {
                             Id = "d224a03d-bf0c-4a05-b728-e3521e45d74d",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fbce4d8c-4da2-4595-88d4-0029de5b1cd0",
+                            ConcurrencyStamp = "ed7913a3-f2ad-46b1-94ca-31407e99e7b1",
                             Email = "Eve@Davis.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEB6h6rhKrDz4YWWFjlrNCUteSMAwgmRl7BUubArX6HColZLMvbnBThmEsaOyZBddmw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFeX6Flyr6Io5ALELk99jFJ3nCEqT4q/fnL+WHajjjQFDLICjt3lePMgZ4HScD7GNg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5f0c029d-2ee2-4917-8e05-25e43243d653",
+                            SecurityStamp = "f0f36a2e-5230-4e86-8f31-1c1a5dbbacaf",
                             TwoFactorEnabled = false,
                             UserName = "EveDavis"
                         });
