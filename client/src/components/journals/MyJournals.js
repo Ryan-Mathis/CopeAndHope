@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { fetchJournalsByUserId } from '../../managers/journalManager.js';
-import { Button, Modal, ModalFooter, ModalHeader, Spinner, Table } from 'reactstrap';
+import { Button, Spinner, Table } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
+import { FilterJournalsByEmotion } from '../emotions/FilterJournalsByEmotion.js';
 
 export default function MyJournals ({ loggedInUser }) {
     const [journals, setJournals] = useState();
@@ -24,6 +25,7 @@ export default function MyJournals ({ loggedInUser }) {
       <>
         <div className="container">
           <h2>My Journals</h2>
+          <FilterJournalsByEmotion journals={journals} setJournals={setJournals} getMyJournals={getMyJournals}/>
           <Table>
             <thead>
               <th>Coping Strategy</th>
