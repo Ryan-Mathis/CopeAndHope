@@ -97,4 +97,21 @@ public class JournalController : ControllerBase
 
         return NoContent();
     }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteJournal(int id)
+    {
+        CopeJournal JournalToDelete = _dbContext.CopeJournals.SingleOrDefault(j => j.Id == id);
+
+        if (JournalToDelete == null)
+        {
+            return NotFound();
+        }
+
+        _dbContext.Remove(JournalToDelete);
+        _dbContext.SaveChanges();
+
+        return NoContent();
+    }
+
 }
