@@ -5,24 +5,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default function MyJournals ({ loggedInUser }) {
     const [journals, setJournals] = useState();
-    const [modal, setModal] = useState(false);
-    const [journalId, setJournalId] = useState(0);
 
     const navigate = useNavigate();
 
     const getMyJournals = () => {
         fetchJournalsByUserId(loggedInUser.id).then(setJournals);
-    };
-
-    const toggle = () => {
-      setModal(!modal);
-    };
-
-    const handleDelete = (e, id) => {
-      e.preventDefault();
-
-    //   deleteJournal(id)
-    //     .then(() => getMyJournals())
     };
   
     useEffect(() => {
@@ -71,23 +58,6 @@ export default function MyJournals ({ loggedInUser }) {
             </tbody>
           </Table>
           {/* <Button onClick={() => navigate("new")}>Create New Journal</Button> */}
-          <Modal isOpen={modal} toggle={toggle}>
-            <ModalHeader toggle={toggle}>Are you sure you want to delete this Journal?</ModalHeader>
-            <ModalFooter>
-              <Button color="danger" onClick={(e) => {
-                toggle()
-                handleDelete(e, journalId)
-              }}>
-                Confirm Deletion
-              </Button>{' '}
-              <Button color="primary" onClick={() => {
-                toggle()
-                setJournalId(0)
-              }}>
-                Cancel
-              </Button>
-            </ModalFooter>
-          </Modal>
         </div>
       </>
     );

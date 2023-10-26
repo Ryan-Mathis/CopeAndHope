@@ -22,3 +22,9 @@ export const fetchEditJournal = (id, journal) => {
         body: JSON.stringify(journal)
     })
 };
+
+export const deleteJournal = (id) => {
+    return fetch(`${_apiUrl}/${id}`, {
+        method: "DELETE"
+    })
+};

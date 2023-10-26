@@ -1,15 +1,28 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 import { getEmotions } from "../../managers/emotionManager.js";
-import { fetchEditJournal, fetchJournalById } from "../../managers/journalManager.js";
-import { Form, Button, FormGroup, Input, Label, Spinner } from "reactstrap";
+import { fetchEditJournal, fetchJournalById, deleteJournal } from "../../managers/journalManager.js";
+import { Form, Button, FormGroup, Input, Label, Spinner, Modal, ModalHeader, ModalFooter } from "reactstrap";
 
 export const EditJournal = ({ loggedInUser }) => {
     const navigate = useNavigate();
     const { id } = useParams();
     const [emotions, setEmotions] = useState();
     const [journalToEdit, setJournalToEdit] = useState();
+    const [journalId, setJournalId] = useState(0);
+    const [modal, setModal] = useState(false);
 
+    const toggle = () => {
+        setModal(!modal);
+      };
+  
+      const handleDelete = (e, id) => {
+        e.preventDefault();
+  
+        deleteJournal(id)
+          .then(navigate(`/myjournals/${id}`))
+      };
+  
     const getAllEmotions = () => {
         getEmotions().then(setEmotions);
     };
@@ -81,13 +94,12 @@ export const EditJournal = ({ loggedInUser }) => {
                 copeStrategyId: journalToEdit.copeStrategyId
             };
             fetchEditJournal(id, editedJournalToSubmit).then((res) =>
-                navigate(`/myjournals/${id}`)
+                navigate(`/myjournals`)
             );
         }
     };
 
-    if (!journalToEdit || !emotions)
-    {
+    if (!journalToEdit || !emotions) {
         return <Spinner />;
     };
     return (
@@ -133,6 +145,29 @@ export const EditJournal = ({ loggedInUser }) => {
                 >
                     Cancel
                 </Button>
+                <Button color="danger" onClick={() => {
+                    toggle()
+                    setJournalId(id)
+                }}>
+                    Delete
+                </Button>
+                <Modal isOpen={modal} toggle={toggle}>
+                    <ModalHeader toggle={toggle}>Are you sure you want to delete this Journal?</ModalHeader>
+                    <ModalFooter>
+                        <Button color="danger" onClick={(e) => {
+                            toggle()
+                            handleDelete(e, journalId)
+                        }}>
+                            Confirm Deletion
+                        </Button>{' '}
+                        <Button color="primary" onClick={() => {
+                            toggle()
+                            setJournalId(0)
+                        }}>
+                            Cancel
+                        </Button>
+                    </ModalFooter>
+                </Modal>
 
             </div>
         </>
