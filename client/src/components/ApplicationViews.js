@@ -6,6 +6,7 @@ import MyJournals from "./journals/MyJournals.js";
 import HomePage from "./HomePage.js";
 import { CreateNewJournal } from "./journals/CreateNewJournal.js";
 import { JournalDetails } from "./journals/JournalDetails.js";
+import { EditJournal } from "./journals/EditJournal.js";
 
 export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
   return (
@@ -43,6 +44,14 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
           element={
             <AuthorizedRoute loggedInUser={loggedInUser}>
               <JournalDetails loggedInUser={loggedInUser} />
+            </AuthorizedRoute>
+          }
+        />
+        <Route
+          path=":id/edit"
+          element={
+            <AuthorizedRoute loggedInUser={loggedInUser}>
+              <EditJournal loggedInUser={loggedInUser} />
             </AuthorizedRoute>
           }
         />

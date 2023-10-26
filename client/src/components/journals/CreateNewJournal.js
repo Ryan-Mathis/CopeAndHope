@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getEmotions } from '../../managers/emotionManager.js';
-import { Button, Form, FormGroup, Input, Label, Spinner, UncontrolledAlert } from "reactstrap";
+import { Button, Form, FormGroup, Input, Label, Spinner } from "reactstrap";
 import { fetchCreateNewJournal } from '../../managers/journalManager.js';
 import { fetchActiveCopeStrategyByUserId } from "../../managers/strategyManager.js";
 
