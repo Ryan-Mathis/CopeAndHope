@@ -114,4 +114,20 @@ public class JournalController : ControllerBase
         return NoContent();
     }
 
+    [HttpGet("filter")]
+    // [Authorize]
+
+    public IActionResult getJournalsByEmotionId(int? emotionId)
+    {
+        //need to find Posts.postTags.Id that match the tagId passed in from the front-end
+        return Ok(_dbContext.CopeJournals
+        .Include(j => j.CopeStrategy)
+        .Include(j => j.UserProfile)
+        .Include(j => j.CopeEmotions)
+        .ThenInclude(ce => ce.Emotion)
+        .Where(j => j.CopeEmotions.Any(ce => ce.EmotionId == emotionId))
+        .OrderBy(j => j.JournalDate)
+        .ToList());
+    }
+
 }

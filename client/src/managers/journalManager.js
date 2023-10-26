@@ -28,3 +28,8 @@ export const deleteJournal = (id) => {
         method: "DELETE"
     })
 };
+
+export const fetchJournalsByEmotion = (emotionId) => {
+    return fetch(`${_apiUrl}/filter?emotionId=${emotionId}`).then(res => res.json())
+  }
+  
