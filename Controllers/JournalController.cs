@@ -1,5 +1,6 @@
 using CopeAndHope.Data;
 using CopeAndHope.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,7 @@ public class JournalController : ControllerBase
     }
 
     [HttpGet("user/{userId}")]
+    [Authorize]
     public IActionResult GetCurrentUserJournals(int userId)
     {
         return Ok(_dbContext.CopeJournals
@@ -28,6 +30,7 @@ public class JournalController : ControllerBase
     }
 
     [HttpGet("{journalId}")]
+    [Authorize]
     public IActionResult GetJournalById(int journalId)
     {
         return Ok(_dbContext.CopeJournals
@@ -39,6 +42,7 @@ public class JournalController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public IActionResult CreateNewJournal(CopeJournal copeJournal)
     {
         copeJournal.JournalDate = DateTime.Now;
@@ -60,6 +64,7 @@ public class JournalController : ControllerBase
     }
 
     [HttpPut("myjournals/{id}")]
+    [Authorize]
     public IActionResult EditJournal(int id, CopeJournal copeJournal)
     {
 
@@ -99,6 +104,8 @@ public class JournalController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize]
+
     public IActionResult DeleteJournal(int id)
     {
         CopeJournal JournalToDelete = _dbContext.CopeJournals.SingleOrDefault(j => j.Id == id);
@@ -115,7 +122,7 @@ public class JournalController : ControllerBase
     }
 
     [HttpGet("filter")]
-    // [Authorize]
+    [Authorize]
 
     public IActionResult getJournalsByEmotionId(int? emotionId)
     {

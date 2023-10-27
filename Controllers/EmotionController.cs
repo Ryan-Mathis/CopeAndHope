@@ -1,4 +1,5 @@
 using CopeAndHope.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,7 @@ public class EmotionController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     public IActionResult GetEmotions()
     {
         return Ok(_dbContext.Emotions.ToList());
