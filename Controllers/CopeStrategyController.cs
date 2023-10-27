@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using CopeAndHope.Data;
 using CopeAndHope.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ public class CopeStrategyController : ControllerBase
     }
 
     [HttpGet("{copeStrategyId}")]
+    [Authorize]
     public IActionResult GetCopeStrategyById(int copeStrategyId)
     {
         return Ok(_dbContext.CopeStrategies.SingleOrDefault(cs => cs.Id == copeStrategyId));
@@ -36,6 +38,7 @@ public class CopeStrategyController : ControllerBase
     // }
 
     [HttpGet("active/{userId}")]
+    [Authorize]
     public IActionResult GetActiveCopeStrategyByUserId(int userId)
     {
         DateTime threeDaysAgo = DateTime.Now.AddDays(-3);
@@ -67,6 +70,7 @@ public class CopeStrategyController : ControllerBase
     }
 
     [HttpGet("unused/{userId}")]
+    [Authorize]
     public IActionResult GetUnusedCopeStrategies(int userId)
     {
         List<CopeStrategy> copeStrategiesUsedByCurrentUser = _dbContext.CopeStrategies

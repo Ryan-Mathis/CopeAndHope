@@ -28,10 +28,6 @@ export const FilterJournalsByEmotion = ({journals, setJournals, getMyJournals}) 
         } 
     },[selectedEmotion])
 
-    console.log("selected emotion", selectedEmotion)
-    
-    console.log(journals)
-
     if (!journals){
         return null;
     }
