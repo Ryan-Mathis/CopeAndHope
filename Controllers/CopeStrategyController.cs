@@ -38,7 +38,7 @@ public class CopeStrategyController : ControllerBase
     // }
 
     [HttpGet("active/{userId}")]
-    [Authorize]
+    // [Authorize]
     public IActionResult GetActiveCopeStrategyByUserId(int userId)
     {
         DateTime threeDaysAgo = DateTime.Now.AddDays(-3);
@@ -47,8 +47,7 @@ public class CopeStrategyController : ControllerBase
             .Include(cs => cs.CopeJournals)
             .Where(cs => cs.CopeJournals
                 .Any(cj => cj.UserProfileId == userId && cj.JournalDate >= threeDaysAgo))
-            .OrderByDescending(cs => cs.CopeJournals
-            .Max(cj => cj.JournalDate))
+            .OrderByDescending(cs => cs.CopeJournals.Max(cj => cj.JournalDate))
             .FirstOrDefault();
 
         if (activeCopeStrategy == null)
@@ -65,12 +64,12 @@ public class CopeStrategyController : ControllerBase
         }
         else
         {
-            return NotFound("There are older journal entries.");
+            return NotFound();
         }
     }
 
     [HttpGet("unused/{userId}")]
-    [Authorize]
+    // [Authorize]
     public IActionResult GetUnusedCopeStrategies(int userId)
     {
         List<CopeStrategy> copeStrategiesUsedByCurrentUser = _dbContext.CopeStrategies
@@ -78,10 +77,14 @@ public class CopeStrategyController : ControllerBase
         .Where(cs => cs.CopeJournals.Any(cj => cj.UserProfileId == userId))
         .ToList();
 
-        List<CopeStrategy> unusedCopeStrategies = _dbContext.CopeStrategies
-        .Where(cs => !copeStrategiesUsedByCurrentUser.Contains(cs))
-        .ToList();
+        CopeStrategy unusedCopeStrategy = _dbContext.CopeStrategies
+        .FirstOrDefault(cs => !copeStrategiesUsedByCurrentUser.Contains(cs));
 
-        return Ok(unusedCopeStrategies);
+        if(unusedCopeStrategy == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(unusedCopeStrategy);
     }
 }

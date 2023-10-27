@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { getEmotions } from '../../managers/emotionManager.js';
 import { Button, Form, FormGroup, Input, Label, Spinner } from "reactstrap";
 import { fetchCreateNewJournal } from '../../managers/journalManager.js';
-import { fetchActiveCopeStrategyByUserId } from "../../managers/strategyManager.js";
+import { fetchActiveCopeStrategyByUserId, fetchUnusedStrategyByUserId } from "../../managers/strategyManager.js";
 
 
 export const CreateNewJournal = ({ loggedInUser }) => {
@@ -20,7 +20,15 @@ export const CreateNewJournal = ({ loggedInUser }) => {
     };
 
     const getUsersActiveCopeStrategy = () => {
-        fetchActiveCopeStrategyByUserId(loggedInUser.id).then(setActiveCopeStrategy);
+        fetchActiveCopeStrategyByUserId(loggedInUser.id).then(res => {
+            if(res !== null)
+            {
+                setActiveCopeStrategy(res)
+            }
+            else {
+                fetchUnusedStrategyByUserId(loggedInUser.id).then(setActiveCopeStrategy);
+            }
+        });
     };
 
     useEffect(() => {
@@ -79,7 +87,7 @@ export const CreateNewJournal = ({ loggedInUser }) => {
         }
     };
 
-    if (!emotions) {
+    if (!emotions || !activeCopeStrategy) {
         return <Spinner />;
     }
     return (
