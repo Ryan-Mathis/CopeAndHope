@@ -20,7 +20,7 @@ export const EditJournal = ({ loggedInUser }) => {
         e.preventDefault();
   
         deleteJournal(id)
-          .then(navigate(`/myjournals/${id}`))
+          .then(navigate(`/myjournals/`))
       };
   
     const getAllEmotions = () => {
